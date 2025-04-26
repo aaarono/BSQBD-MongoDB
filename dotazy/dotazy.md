@@ -1,0 +1,1 @@
+DOTAZY TADY:
