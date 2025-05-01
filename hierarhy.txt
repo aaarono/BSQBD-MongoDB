@@ -1,0 +1,28 @@
+BSQBD-MongoDB
+├── BSQBD-Aronov-Oleksandr.docx
+├── BSQBD-Diagram.drawio.png
+├── data
+│   ├── TopAnime.csv
+│   ├── TopMovies.csv
+│   ├── TopNetflix.csv
+│   ├── analyze_data.py
+│   └── clean_data.py
+├── dotazy
+│   └── dotazy.md
+├── funkcni_reseni
+│   ├── docker-compose.yml
+│   ├── fault_sim.sh
+│   ├── mongodb-build
+│   │   ├── Dockerfile
+│   │   └── auth
+│   │       └── mongodb-keyfile
+│   └── scripts
+│       ├── auth.js
+│       ├── bootstrap.sh
+│       ├── init-configserver.js
+│       ├── init-router.js
+│       ├── init-shard01.js
+│       ├── init-shard02.js
+│       ├── init-shard03.js
+│       └── load-data.sh
+└── hierarhy.txt
