@@ -60,4 +60,24 @@ for FILE in /Data/TopAnime.csv /Data/TopMovies.csv /Data/TopNetflix.csv; do
   echo -e "${GREEN}[INFO] Loaded ${COUNT} documents into ${NAME}${NC}"
 done
 
+echo -e "${YELLOW}==> Creating embedded document 'statistics' for TopAnime${NC}"
+mongosh "${URI}" --quiet <<EOF
+use ${DB};
+db.TopAnime.updateMany(
+  {},
+  [
+    { \$set: {
+        statistics: {
+          scoredBy: "\$scoredby",
+          members:  "\$members",
+          favorites:"\$favorites"
+        }
+    }},
+    { \$unset: ["scoredby","members","favorites"] }
+  ]
+);
+exit;
+EOF
+echo -e "${GREEN}[INFO] Embedded document 'statistics' created${NC}"
+
 echo -e "${GREEN}==> load-data_debug.sh complete${NC}"

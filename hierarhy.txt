@@ -1,17 +1,60 @@
 BSQBD-MongoDB
 ├── BSQBD-Aronov-Oleksandr.docx
-├── BSQBD-Diagram.drawio.png
 ├── data
 │   ├── TopAnime.csv
 │   ├── TopMovies.csv
 │   ├── TopNetflix.csv
 │   ├── analyze_data.py
-│   └── clean_data.py
+│   ├── clean_data.py
+│   └── plots
+│       ├── TopAnime.csv_animeid_hist.png
+│       ├── TopAnime.csv_animeurl_top10.png
+│       ├── TopAnime.csv_boxplot.png
+│       ├── TopAnime.csv_duration_top10.png
+│       ├── TopAnime.csv_englishname_top10.png
+│       ├── TopAnime.csv_episodes_hist.png
+│       ├── TopAnime.csv_favorites_hist.png
+│       ├── TopAnime.csv_genres_top10.png
+│       ├── TopAnime.csv_imageurl_top10.png
+│       ├── TopAnime.csv_members_hist.png
+│       ├── TopAnime.csv_missing.png
+│       ├── TopAnime.csv_name_top10.png
+│       ├── TopAnime.csv_popularity_hist.png
+│       ├── TopAnime.csv_premiered_top10.png
+│       ├── TopAnime.csv_producers_top10.png
+│       ├── TopAnime.csv_rank_hist.png
+│       ├── TopAnime.csv_rating_top10.png
+│       ├── TopAnime.csv_score_hist.png
+│       ├── TopAnime.csv_scoredby_hist.png
+│       ├── TopAnime.csv_source_top10.png
+│       ├── TopAnime.csv_studios_top10.png
+│       ├── TopAnime.csv_synopsis_top10.png
+│       ├── TopAnime.csv_type_top10.png
+│       ├── TopMovies.csv_ID_hist.png
+│       ├── TopMovies.csv_Overview_top10.png
+│       ├── TopMovies.csv_Popularity_hist.png
+│       ├── TopMovies.csv_Title_top10.png
+│       ├── TopMovies.csv_VoteAverage_hist.png
+│       ├── TopMovies.csv_VoteCount_hist.png
+│       ├── TopMovies.csv_boxplot.png
+│       ├── TopNetflix.csv_Description_top10.png
+│       ├── TopNetflix.csv_ListedIn_top10.png
+│       ├── TopNetflix.csv_ShowID_top10.png
+│       ├── TopNetflix.csv_Title_top10.png
+│       ├── TopNetflix.csv_Type_top10.png
+│       ├── TopNetflix.csv_cast_top10.png
+│       ├── TopNetflix.csv_country_top10.png
+│       ├── TopNetflix.csv_director_top10.png
+│       ├── TopNetflix.csv_duration_top10.png
+│       ├── TopNetflix.csv_missing.png
+│       ├── TopNetflix.csv_rating_top10.png
+│       ├── comparison_missing.png
+│       └── comparison_records.png
 ├── dotazy
 │   └── dotazy.md
 ├── funkcni_reseni
 │   ├── docker-compose.yml
-│   ├── fault_sim.sh
+│   ├── kill_node.sh
 │   ├── mongodb-build
 │   │   ├── Dockerfile
 │   │   └── auth
