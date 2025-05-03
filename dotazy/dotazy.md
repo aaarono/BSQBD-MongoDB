@@ -33,9 +33,9 @@ V konkrétním případě:
     popularity:  7500,
     score:       9.1,
     statistics: {
-      scoredBy:  30000,  // раньше это было top-level scoredby
-      members:   45000,  // раньше это было top-level members
-      favorites: 1200    // раньше это было top-level favorites
+      scoredBy:  30000,
+      members:   45000,
+      favorites: 1200
     },
     tags: ["New", "Recommended"]
   },
@@ -415,9 +415,9 @@ V konkrétním případě:
   – výsledek explain ukáže, jak efektivně MongoDB zpracovalo tento pipeline.
 > use MyDatabase;
 db.TopMovies.explain("executionStats").aggregate([
-  { $match:   { VoteAverage: { $gte: 8.0 } } },     // только «хорошие» фильмы
-  { $sort:    { VoteCount: -1 } },                 // по убыванию числа голосов
-  { $limit:   5 },                                 // топ-5
+  { $match:   { VoteAverage: { $gte: 8.0 } } },
+  { $sort:    { VoteCount: -1 } },
+  { $limit:   5 },
   { $project: { _id:0, ID:1, Title:1, VoteAverage:1, VoteCount:1 } }
 ]);
 

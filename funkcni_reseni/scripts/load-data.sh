@@ -18,7 +18,7 @@ echo -e "${YELLOW}==> load-data_debug.sh started${NC}"
 echo -e "${YELLOW}==> Waiting for mongos on ${MONGOS_HOST}:${MONGOS_PORT}${NC}"
 until bash -c ">/dev/tcp/${MONGOS_HOST}/${MONGOS_PORT}"; do
   echo -e "${CYAN}[DEBUG] mongos not available yet, retrying...${NC}"
-  sleep 1
+  sleep 10
 done
 echo -e "${GREEN}[INFO] mongos is available${NC}"
 
@@ -28,7 +28,7 @@ while :; do
   SHARD_COUNT=$(mongosh "${URI}" --quiet --eval "db.getSiblingDB('config').shards.countDocuments()")
   echo -e "${CYAN}[DEBUG] Shard count: ${SHARD_COUNT}${NC}"
   (( SHARD_COUNT >= 1 )) && break
-  sleep 1
+  sleep 5
 done
 echo -e "${GREEN}[INFO] Shards are registered${NC}"
 
